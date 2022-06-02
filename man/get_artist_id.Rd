@@ -2,7 +2,7 @@
 % Please edit documentation in R/ids.R
 \name{get_artist_id}
 \alias{get_artist_id}
-\title{Converts artist string to spotify id}
+\title{Returns an artist's the unique spotify id}
 \usage{
 get_artist_id(artist)
 }
@@ -10,5 +10,5 @@ get_artist_id(artist)
 \item{artist}{artist's name (string)}
 }
 \description{
-Converts artist string to spotify id
+Returns an artist's the unique spotify id
 }

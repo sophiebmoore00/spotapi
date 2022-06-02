@@ -1,4 +1,4 @@
-#' Converts artist string to spotify id
+#' Returns an artist's the unique spotify id
 #'
 #' @param artist artist's name (string)
 #'

@@ -2,6 +2,11 @@
 
 export("%>%")
 export(get_artist_id)
+export(related_artists)
 import(dplyr)
+import(glue)
+import(httr)
+import(jsonlite)
+import(spotifyr)
 import(stringr)
 importFrom(magrittr,"%>%")
