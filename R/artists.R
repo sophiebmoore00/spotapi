@@ -1,6 +1,6 @@
 #' Returns related artists
 #'
-#' @param artist artist's name
+#' @param artist artist's name (quoted)
 #'
 #' @import glue
 #' @import jsonlite
@@ -26,9 +26,9 @@ related_artists <- function(artist) {
 
 }
 
-#' Returns an artist's top songs
+#' Returns an artist's 10 top songs on Spotify
 #'
-#' @param artist artist's name
+#' @param artist artist's name (quoted)
 #'
 #' @import glue
 #' @import jsonlite

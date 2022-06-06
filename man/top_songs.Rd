@@ -2,13 +2,13 @@
 % Please edit documentation in R/artists.R
 \name{top_songs}
 \alias{top_songs}
-\title{Returns an artist's top songs}
+\title{Returns an artist's 10 top songs on Spotify}
 \usage{
 top_songs(artist)
 }
 \arguments{
-\item{artist}{artist's name}
+\item{artist}{artist's name (quoted)}
 }
 \description{
-Returns an artist's top songs
+Returns an artist's 10 top songs on Spotify
 }

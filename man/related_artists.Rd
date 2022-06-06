@@ -7,7 +7,7 @@
 related_artists(artist)
 }
 \arguments{
-\item{artist}{artist's name}
+\item{artist}{artist's name (quoted)}
 }
 \description{
 Returns related artists
