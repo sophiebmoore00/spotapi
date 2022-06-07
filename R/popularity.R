@@ -11,7 +11,10 @@ artist_charts <- function(artist) {
 
   artist_str <- tolower(artist)
   results <- charts_data %>%
-    filter(str_detect(.$artist, artist_str))
+    filter(artist_1 == artist_str |
+           artist_2 == artist_str |
+           artist_3 == artist_str |
+           features == artist_str)
 
   return(results)
 
