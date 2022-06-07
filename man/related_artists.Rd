@@ -9,6 +9,9 @@ related_artists(artist)
 \arguments{
 \item{artist}{artist's name (quoted)}
 }
+\value{
+A dataframe of related artists
+}
 \description{
 Returns related artists
 }

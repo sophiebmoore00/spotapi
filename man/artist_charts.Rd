@@ -9,6 +9,9 @@ artist_charts(artist)
 \arguments{
 \item{artist}{artist's name (quoted)}
 }
+\value{
+A dataframe of all the artist's songs that have made the Billboard Top 100
+}
 \description{
 Returns an artist's number of Billboard Top 100 songs for a specified time period
 }

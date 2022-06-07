@@ -2,6 +2,8 @@
 #'
 #' @param artist artist's name (quoted)
 #'
+#' @return A dataframe of all the artist's songs that have made the Billboard Top 100
+#'
 #' @import glue
 #' @import dplyr
 #' @import stringr

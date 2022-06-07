@@ -9,6 +9,9 @@ top_songs(artist)
 \arguments{
 \item{artist}{artist's name (quoted)}
 }
+\value{
+A dataframe of the artist's top 10 songs on Spotify
+}
 \description{
 Returns an artist's 10 top songs on Spotify
 }

@@ -2,13 +2,16 @@
 % Please edit documentation in R/audio-features.R
 \name{track_audio_features}
 \alias{track_audio_features}
-\title{Returns the audio features of a track}
+\title{Get the audio features of a track}
 \usage{
-track_audio_features(track)
+track_audio_features(track_id)
 }
 \arguments{
-\item{track}{Track name (quoted)}
+\item{track}{Track spotify id (quoted)}
+}
+\value{
+A dataframe with the audio features of a single track
 }
 \description{
-Returns the audio features of a track
+Get the audio features of a track
 }
