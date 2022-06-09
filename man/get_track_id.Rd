@@ -4,12 +4,10 @@
 \alias{get_track_id}
 \title{Returns unique track ID}
 \usage{
-get_track_id(track, artist)
+get_track_id(track)
 }
 \arguments{
 \item{track}{track's name (quoted)}
-
-\item{artist}{artist's name (quotes)}
 }
 \value{
 The spotify ID

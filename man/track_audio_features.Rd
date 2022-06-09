@@ -4,10 +4,10 @@
 \alias{track_audio_features}
 \title{Get the audio features of a track}
 \usage{
-track_audio_features(track_id)
+track_audio_features(track)
 }
 \arguments{
-\item{track}{Track spotify id (quoted)}
+\item{track}{Track name (quoted)}
 }
 \value{
 A dataframe with the audio features of a single track

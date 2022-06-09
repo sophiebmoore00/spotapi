@@ -1,6 +1,6 @@
 #' Get the audio features of a track
 #'
-#' @param track Track spotify id (quoted)
+#' @param track Track name (quoted)
 #'
 #' @return A dataframe with the audio features of a single track
 #'
@@ -11,9 +11,10 @@
 #' @import glue
 #'
 #' @export
-track_audio_features <- function(track_id) {
+track_audio_features <- function(track) {
 
-  url <- glue("https://api.spotify.com/v1/audio-features/{track_id}")
+  id <- get_track_id(track)
+  url <- glue("https://api.spotify.com/v1/audio-features/{id}")
 
   prep_sys()
   token <- get_spotify_access_token()
@@ -22,6 +23,7 @@ track_audio_features <- function(track_id) {
   dat <- fromJSON(rawToChar(res$content))
 
   results <- as.data.frame(dat)
+  results <- select(results, -type, -uri, -track_href, -analysis_url)
 
   return(results)
 
@@ -45,14 +47,15 @@ artist_audio_features <- function(artist) {
   full <- data.frame()
 
   #save the audio features for each track
-  for (i in nrow(top_songs)) {
+  for (i in 1:nrow(top_songs)) {
     step <- track_audio_features(top_songs[i,])
     full <- rbind(full, step)
   }
 
   #find the averages
   avgs <- full %>%
-    summarise(across(everything(), avg = mean(.x, na.rm = TRUE)))
+    select(-id) %>%
+    summarise(across(everything(), mean))
 
   return(avgs)
 
