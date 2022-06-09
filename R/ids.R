@@ -1,5 +1,9 @@
 #' Returns an artist's unique Spotify ID
 #'
+#' \code{get_artist_id} communicates with the Spotify API to retrieve the unique identifier
+#' for the selected artist. This ID is necessary to access information related to a given
+#' artist in the Spotify API.
+#'
 #' @param artist Artist's name (quoted)
 #'
 #' @return A string of the artist's unique Spotify ID
@@ -31,6 +35,10 @@ get_artist_id <- function(artist){
 }
 
 #' Returns an individual track's unique Spotify ID
+#'
+#' \code{get_track_id} communicates with the Spotify API to retrieve the unique identifier
+#' for the selected track. This ID is necessary to access information related to a given
+#' track in the Spotify API.
 #'
 #' @param track Track's name (quoted)
 #'

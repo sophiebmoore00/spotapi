@@ -2,16 +2,20 @@
 % Please edit documentation in R/ids.R
 \name{get_track_id}
 \alias{get_track_id}
-\title{Returns unique track ID}
+\title{Returns an individual track's unique Spotify ID}
 \usage{
 get_track_id(track)
 }
 \arguments{
-\item{track}{track's name (quoted)}
+\item{track}{Track's name (quoted)}
 }
 \value{
-The spotify ID
+A string of the track's unique Spotify ID
 }
 \description{
-Returns unique track ID
+Returns an individual track's unique Spotify ID
+}
+\examples{
+get_track_id("rich spirit")
+
 }

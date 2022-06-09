@@ -62,7 +62,7 @@ top_songs <- function(artist) {
   res <- GET(url, query = list(access_token = token, market = 'US'))
   dat <- fromJSON(rawToChar(res$content))
 
- results <- as.data.frame(cbind(dat$tracks$name, dat$tracks$duration_ms/1000, dat$tracks$popularity))
+  results <- as.data.frame(cbind(dat$tracks$name, dat$tracks$duration_ms/1000, dat$tracks$popularity))
   colnames(results) <- c("Song", "Duration", "Popularity")
 
   return(results)

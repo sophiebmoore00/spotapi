@@ -2,7 +2,7 @@
 % Please edit documentation in R/audio-features.R
 \name{artist_audio_features}
 \alias{artist_audio_features}
-\title{Get the average audio features for an artist}
+\title{Get the average audio features for an artist's top songs}
 \usage{
 artist_audio_features(artist)
 }
@@ -13,5 +13,7 @@ artist_audio_features(artist)
 A dataframe of an artist's averages for audio feature metrics
 }
 \description{
-Get the average audio features for an artist
+\code{artist_audio_features} communicates with the Spotify API to pull the audio features
+of an artist's current top 10 songs on Spotify and averages these variables across all the songs
+to provide an estimation of the artist's average for these audio features.
 }

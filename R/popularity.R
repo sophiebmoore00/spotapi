@@ -5,7 +5,7 @@
 #' making the Top 100. Variables include date, rank, song title, the full artist, the main artist(s),
 #' features, peak rank on the chart, and the number of weeks the track spent on the charts.
 #'
-#' @param artist artist's name (quoted)
+#' @param artist Artist's name (quoted)
 #'
 #' @return A dataframe of all the artist's songs that have made the Billboard Top 100
 #'

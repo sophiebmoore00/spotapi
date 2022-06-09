@@ -2,13 +2,20 @@
 % Please edit documentation in R/ids.R
 \name{get_artist_id}
 \alias{get_artist_id}
-\title{Returns an artist's the unique spotify id}
+\title{Returns an artist's unique Spotify ID}
 \usage{
 get_artist_id(artist)
 }
 \arguments{
-\item{artist}{artist's name (string)}
+\item{artist}{Artist's name (quoted)}
+}
+\value{
+A string of the artist's unique Spotify ID
 }
 \description{
-Returns an artist's the unique spotify id
+Returns an artist's unique Spotify ID
+}
+\examples{
+get_artist_id("johnny cash")
+
 }

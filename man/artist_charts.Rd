@@ -2,16 +2,23 @@
 % Please edit documentation in R/popularity.R
 \name{artist_charts}
 \alias{artist_charts}
-\title{Returns an artist's number of Billboard Top 100 songs for a specified time period}
+\title{Returns an artist's number of Billboard Top 100 songs since 1958}
 \usage{
 artist_charts(artist)
 }
 \arguments{
-\item{artist}{artist's name (quoted)}
+\item{artist}{Artist's name (quoted)}
 }
 \value{
 A dataframe of all the artist's songs that have made the Billboard Top 100
 }
 \description{
-Returns an artist's number of Billboard Top 100 songs for a specified time period
+\code{artist_charts} returns a dataframe of all the selected artist's songs that have made
+the Billboard Top 100 from 1958—2021. Each row of the dataframe of a single instance of a track
+making the Top 100. Variables include date, rank, song title, the full artist, the main artist(s),
+features, peak rank on the chart, and the number of weeks the track spent on the charts.
+}
+\examples{
+artist_charts("kendrick lamar")
+
 }

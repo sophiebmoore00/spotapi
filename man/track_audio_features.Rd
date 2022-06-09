@@ -13,5 +13,7 @@ track_audio_features(track)
 A dataframe with the audio features of a single track
 }
 \description{
-Get the audio features of a track
+\code{track_audio_features} communicates with the Spotify API to pull audio features for
+the selected track. Variables include multiple characteristics of tracks, including
+danceability, energy, key, acousticness, and more.
 }
