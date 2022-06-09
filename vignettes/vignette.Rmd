@@ -27,7 +27,7 @@ library(spotapi)
 
 The Spotify API stores information on artists, albums, tracks, and playlists, each of which can be accessed through their unique Spotify ID. 
 
-`get_artist_id()` and `get_track_id()` are easy-to-use functions that take an artist or track name in quotes and retrieve their unique ID from the Spotify API. 
+`get_artist_id()` and `get_track_id()` are easy-to-use functions that take an artist or track name in quotes and retrieve their unique ID from the Spotify API. Spelling matters but capitalization doesn't (holds true for the rest of the package as well). 
 
 These two functions are called by other functions in this package so that users can input artist or track names in plain language rather than needing their ID. The functions are also exported to allow individuals to easily access IDs for other reasons. 
 
@@ -69,7 +69,8 @@ Below is a ggplot example of how the output from `artist_charts()` could be used
 library(ggplot2)
 artist_charts("frank ocean") %>% 
   ggplot(aes(x = lubridate::as_date(date), y = as.numeric(rank), color = song)) +
-  geom_point() 
+  geom_point() +
+  theme(legend.position = "none")
 ```
 
 ## Audio Features
