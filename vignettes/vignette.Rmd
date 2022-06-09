@@ -1,0 +1,95 @@
+---
+title: "{spotapi} Vignette"
+author: By Sophie Moore
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{{spotapi} Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(spotapi)
+```
+
+## Introduction to {spotapi}
+
+{spotapi} (pronounced "spot-uh-pee) is a wrapper package for the Spotify API. It handles access tokens and keys, requests to the API, and cleaning the data so the user does not have to worry about figuring out how to obtain access keys, confusing syntax for making requests, or pulling data in an untidy format. 
+
+## Spotify IDs
+
+The Spotify API stores information on artists, albums, tracks, and playlists, each of which can be accessed through their unique Spotify ID. 
+
+`get_artist_id()` and `get_track_id()` are easy-to-use functions that take an artist or track name in quotes and retrieve their unique ID from the Spotify API. 
+
+These two functions are called by other functions in this package so that users can input artist or track names in plain language rather than needing their ID. The functions are also exported to allow individuals to easily access IDs for other reasons. 
+
+```{r}
+get_artist_id("johnny cash")
+```
+
+```{r}
+get_track_id("ring of fire")
+```
+
+## Artist Data
+
+`related_artists()` takes an artist's name in quotes and returns a tidy data frame of 20 related artists. This list is determined by Spotify and [Spotify's developer site](https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-related-artists) says "Similarity is based on analysis of the Spotify community's listening history."
+
+```{r}
+related_artists("pitbull")
+```
+
+`top_songs()` takes an artist's name in quotes and returns a tidy data frame of their current 10 top songs in the US market according to Spotify's catalog information. The returned data frame also includes the length of each song in seconds and Spotify's popularity score out of 100 for that track. 
+
+```{r}
+top_songs("ke$ha")
+```
+
+## Popularity 
+
+Spotify's API does not make available data on number of streams for an artist or track over time. In order to allow a user to still get some idea of an artist's popularity, `artist_charts()` takes a quoted artist name and returns a data frame of each instance of one of their tracks making the Billboard Top 100 since 1958. 
+
+Variables returned include date, rank, song title, the full artist, the main artist(s), features, peak rank on the chart, and the number of weeks the track spent on the charts.
+
+```{r}
+artist_charts("drake")
+```
+
+Below is a ggplot example of how the output from `artist_charts()` could be used. 
+
+```{r}
+library(ggplot2)
+artist_charts("frank ocean") %>% 
+  ggplot(aes(x = lubridate::as_date(date), y = as.numeric(rank), color = song)) +
+  geom_point() 
+```
+
+## Audio Features
+
+Spotify calculates and stores audio analysis variables for each track. According to documentation on [their developer website](https://developer.spotify.com/discover/#recommendations), these variables include:
+
+  * Mood: Danceability, Valence, Energy, Tempo
+  * Properties: Loudness, Speechiness, Instrumentalness
+  * Context: Liveness, Acousticness
+  * Segments, Tatums, Bars, Beats, Pitches, Timbre, and more
+  
+`track_audio_features()` takes the quoted name an individual track and returns that track's scores for these variables according to the Spotify API in a 1 x 14 tidy data frame. 
+
+```{r}
+track_audio_features("hotline bling")
+```
+
+`artist_audio_features()` takes the quoted name of an artist and calculates and returns the average of each of these scores for the artist's current top 10 tracks in a 1 x 13 tidy data frame. 
+
+```{r}
+artist_audio_features("drake")
+```
+

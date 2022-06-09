@@ -8,7 +8,7 @@
 #'
 #' @return A dataframe with the audio features of a single track
 #'
-#' @example
+#' @examples
 #' track_audio_features("hotline bling")
 #'
 #' @import dplyr
@@ -46,7 +46,7 @@ track_audio_features <- function(track) {
 #'
 #' @return A dataframe of an artist's averages for audio feature metrics
 #'
-#' @example
+#' @examples
 #' artist_audio_features("amy winehouse")
 #'
 #' @import dplyr

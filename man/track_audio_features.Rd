@@ -17,3 +17,7 @@ A dataframe with the audio features of a single track
 the selected track. Variables include multiple characteristics of tracks, including
 danceability, energy, key, acousticness, and more.
 }
+\examples{
+track_audio_features("hotline bling")
+
+}

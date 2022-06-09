@@ -17,3 +17,7 @@ A dataframe of an artist's averages for audio feature metrics
 of an artist's current top 10 songs on Spotify and averages these variables across all the songs
 to provide an estimation of the artist's average for these audio features.
 }
+\examples{
+artist_audio_features("amy winehouse")
+
+}
