@@ -13,7 +13,9 @@ get_track_id(track)
 A string of the track's unique Spotify ID
 }
 \description{
-Returns an individual track's unique Spotify ID
+\code{get_track_id} communicates with the Spotify API to retrieve the unique identifier
+for the selected track. This ID is necessary to access information related to a given
+track in the Spotify API.
 }
 \examples{
 get_track_id("rich spirit")

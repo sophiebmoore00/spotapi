@@ -2,7 +2,7 @@
 % Please edit documentation in R/audio-features.R
 \name{track_audio_features}
 \alias{track_audio_features}
-\title{Get the audio features of a track}
+\title{Returns the audio features of a track}
 \usage{
 track_audio_features(track)
 }

@@ -13,7 +13,9 @@ get_artist_id(artist)
 A string of the artist's unique Spotify ID
 }
 \description{
-Returns an artist's unique Spotify ID
+\code{get_artist_id} communicates with the Spotify API to retrieve the unique identifier
+for the selected artist. This ID is necessary to access information related to a given
+artist in the Spotify API.
 }
 \examples{
 get_artist_id("johnny cash")

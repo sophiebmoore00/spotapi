@@ -2,7 +2,7 @@
 % Please edit documentation in R/audio-features.R
 \name{artist_audio_features}
 \alias{artist_audio_features}
-\title{Get the average audio features for an artist's top songs}
+\title{Returns the average audio features for an artist's top songs}
 \usage{
 artist_audio_features(artist)
 }
