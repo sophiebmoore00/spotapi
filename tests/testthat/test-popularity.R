@@ -1,3 +1,8 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+example_artist_charts <- artist_charts("drake")
+usethis::use_data(example_artist_charts, overwrite = TRUE)
+test_that("artist_charts works", {
+
+  res <- artist_charts("drake")
+  expect_equal(example_artist_charts, res)
+
 })

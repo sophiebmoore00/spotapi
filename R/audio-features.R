@@ -38,12 +38,11 @@ track_audio_features <- function(track) {
 #' @import dplyr
 #' @import jsonlite
 #' @import httr
-#' @import spotifyr
 #'
 #' @export
 artist_audio_features <- function(artist) {
 
-  top_songs <- top_songs(artist)
+  top_songs <- top_songs(artist) #save the artist's top 10 songs
   full <- data.frame()
 
   #save the audio features for each track
