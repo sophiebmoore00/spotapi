@@ -1,19 +1,3 @@
-#' Get all of an artist's tracks that are on Spotify
-#'
-#' @param artist Artist's name (quoted)
-#'
-#' @return A dataframe of an artist's entire Spotify discography
-#'
-#' @import dplyr
-#' @import jsonlite
-#' @import httr
-#' @import spotifyr
-#'
-#' @export
-get_artist_tracks <- function(artist) {
-
-}
-
 #' Get the audio features of a track
 #'
 #' @param track Track spotify id (quoted)
@@ -56,5 +40,20 @@ track_audio_features <- function(track_id) {
 #'
 #' @export
 artist_audio_features <- function(artist) {
+
+  top_songs <- top_songs(artist)
+  full <- data.frame()
+
+  #save the audio features for each track
+  for (i in nrow(top_songs)) {
+    step <- track_audio_features(top_songs[i,])
+    full <- rbind(full, step)
+  }
+
+  #find the averages
+  avgs <- full %>%
+    summarise(across(everything(), avg = mean(.x, na.rm = TRUE)))
+
+  return(avgs)
 
 }

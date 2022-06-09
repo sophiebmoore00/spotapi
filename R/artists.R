@@ -56,3 +56,19 @@ top_songs <- function(artist) {
   return(results)
 
 }
+
+#' Get all of an artist's tracks that are on Spotify
+#'
+#' @param artist Artist's name (quoted)
+#'
+#' @return A dataframe of an artist's entire Spotify discography
+#'
+#' @import dplyr
+#' @import jsonlite
+#' @import httr
+#' @import spotifyr
+#'
+#' @export
+artist_tracks <- function(artist) {
+
+}
