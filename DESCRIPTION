@@ -1,9 +1,10 @@
 Package: spotapi
 Title: Talks to the Spotify API
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    c(person("Sophie", "Moore", email = "smoore37@calpoly.edu", role = c("aut", "cre")),
+    person("Cesar", "Nillaga", role = "aut"), 
+    person("Milo", "Weller", role = "aut"))
 Description: This R package provides functions to easily interface with the Spotify API. It is intended to be used to help build a Shiny app. 
 License: MIT + file LICENSE
 Encoding: UTF-8
