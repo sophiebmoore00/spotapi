@@ -1,6 +1,11 @@
-#' Returns an artist's the unique spotify id
+#' Returns an artist's unique Spotify ID
 #'
-#' @param artist artist's name (string)
+#' @param artist Artist's name (quoted)
+#'
+#' @return A string of the artist's unique Spotify ID
+#'
+#' @examples
+#' get_artist_id("johnny cash")
 #'
 #' @import dplyr
 #' @import stringr
@@ -25,11 +30,14 @@ get_artist_id <- function(artist){
   return(id)
 }
 
-#' Returns unique track ID
+#' Returns an individual track's unique Spotify ID
 #'
-#' @param track track's name (quoted)
+#' @param track Track's name (quoted)
 #'
-#' @return The spotify ID
+#' @return A string of the track's unique Spotify ID
+#'
+#' @examples
+#' get_track_id("rich spirit")
 #'
 #' @import glue
 #' @import jsonlite

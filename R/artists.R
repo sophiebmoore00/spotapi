@@ -1,8 +1,14 @@
 #' Returns related artists
 #'
-#' @param artist artist's name (quoted)
+#' \code{related_artists} communicates with the Spotify API to return 20 artists that are
+#' related to the selected artist.
+#'
+#' @param artist Artist's name (quoted)
 #'
 #' @return A dataframe of related artists
+#'
+#' @examples
+#' related_artists("pitbull")
 #'
 #' @import glue
 #' @import jsonlite
@@ -28,11 +34,17 @@ related_artists <- function(artist) {
 
 }
 
-#' Returns an artist's 10 top songs on Spotify
+#' Returns an artist's top songs on Spotify
 #'
-#' @param artist artist's name (quoted)
+#' \code{top_songs} communicates with the Spotify API to return the artist's current
+#' 10 top songs on Spotify.
+#'
+#' @param artist Artist's name (quoted)
 #'
 #' @return A dataframe of the artist's top 10 songs on Spotify
+#'
+#' @examples
+#' top_songs("bruno mars")
 #'
 #' @import glue
 #' @import jsonlite

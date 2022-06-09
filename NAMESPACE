@@ -3,7 +3,6 @@
 export("%>%")
 export(artist_audio_features)
 export(artist_charts)
-export(artist_tracks)
 export(get_artist_id)
 export(get_track_id)
 export(related_artists)

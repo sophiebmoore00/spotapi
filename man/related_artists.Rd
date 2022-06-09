@@ -7,11 +7,16 @@
 related_artists(artist)
 }
 \arguments{
-\item{artist}{artist's name (quoted)}
+\item{artist}{Artist's name (quoted)}
 }
 \value{
 A dataframe of related artists
 }
 \description{
-Returns related artists
+\code{related_artists} communicates with the Spotify API to return 20 artists that are
+related to the selected artist.
+}
+\examples{
+related_artists("pitbull")
+
 }

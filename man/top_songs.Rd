@@ -2,16 +2,21 @@
 % Please edit documentation in R/artists.R
 \name{top_songs}
 \alias{top_songs}
-\title{Returns an artist's 10 top songs on Spotify}
+\title{Returns an artist's top songs on Spotify}
 \usage{
 top_songs(artist)
 }
 \arguments{
-\item{artist}{artist's name (quoted)}
+\item{artist}{Artist's name (quoted)}
 }
 \value{
 A dataframe of the artist's top 10 songs on Spotify
 }
 \description{
-Returns an artist's 10 top songs on Spotify
+\code{top_songs} communicates with the Spotify API to return the artist's current
+10 top songs on Spotify.
+}
+\examples{
+top_songs("bruno mars")
+
 }
